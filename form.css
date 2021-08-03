@@ -1,0 +1,45 @@
+.heading{
+text-align: center;
+}
+.back
+{
+    background-color: #7b7d87;
+    text-align: center;
+}
+.name{
+    padding-top: 5px;
+    font-size: 45px;
+}
+@media(max-width:500px) {
+    .name{
+    padding-top: 5px;
+    font-size: 30px;
+}
+.back{
+font-size: 15px;
+}
+
+}
+
+.contact{
+    padding: 10px;
+    font-size: 30px;
+text-decoration: underline;
+}
+.links a{
+color: black;
+}
+
+.title{
+padding: 2px;
+font-size: 30px;
+text-decoration: underline;
+}
+.butn{
+text-align: center;
+margin:30px ;
+}
+#cv-template{
+    margin-top:70px ;
+    display: none;
+}

@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+<link rel="stylesheet" href="form.css">
+</head>
+<body>
+
+
+<div class="form-group container" id="cv-form">
+<div class="heading">
+    <h2>Generate Resume </h2>
+    <p> provide your details to proceed further :</p> 
+ </div>
+<h3>Personal Information</h3>
+    <div class="form-group mt-2">
+    <label for="firstname">First Name</label>
+    <input type="text" class="form-control" id="firstname" placeholder="Enter first name">
+    </div>
+    <div class="form-group mt-2">
+    <label for="lastname">Last Name</label>
+    <input type="text" class="form-control" id="lastname" placeholder="Enter last name">
+    </div>
+    <div class="form-group mt-2">
+    <label for="number">Phone</label>
+    <input type="number" class="form-control" id="number" placeholder="Enter mobile number">
+    </div>
+    <div class="form-group mt-2">
+    <label for="email">email</label>
+    <input type="email" class="form-control" id="email" placeholder="Enter email-id">
+    </div>
+    <div class="form-group mt-2">
+    <label for="address">Address</label>
+    <textarea type="text" class="form-control" id="address" placeholder="Enter Address"></textarea>
+    </div>
+<p class="text-secondary my-2">Important Links</p>
+    <div class="form-group mt-2">
+    <label for="linkedin">Linkedin link</label>
+    <input type="text" class="form-control" id="linkedin" placeholder="Enter linkedin link">
+    </div>
+    <div class="form-group mt-2">
+    <label for="gfg">gfg id</label>
+    <input type="text" class="form-control" id="gfg" placeholder="Enter gfg id">
+    </div>
+    <div class="form-group mt-2">
+    <label for="codechef">codechef id</label>
+    <input type="text" class="form-control" id="codechef" placeholder="Enter codechef id">
+    </div>
+
+    <h3>Professional Information</h3>
+     <div class="form-group mt-2">
+    <label for="">Objective</label>
+    <textarea type="text" class="form-control " id="objective"  placeholder="Enter here"></textarea>
+    </div>
+
+    <h3>Education Information</h3>
+     <div class="form-group mt-2" id="ed">
+    <label for="">Academic Qualification</label>
+    <textarea type="text" class="form-control eqField"  placeholder="Enter here"></textarea>
+    <div class="container text-center" id="edAddButton">
+    <button onclick="addNewEDField()" class="btn btn-sm btn-primary mt-2">Add more Academic details </button>
+    </div>
+    </div>
+    
+    <h3 class="mt-3">Project Work</h3>
+    <div class="form-group mt-2" id="pw">
+    <label for="">Project Work </label>
+    <textarea type="text" class="form-control pwField"  placeholder="Enter here"></textarea>
+    <div class="container text-center" id="pwAddButton">
+    <button onclick="addNewpwField()" class="btn btn-sm btn-primary mt-2">Add project work  </button>
+    </div>
+    </div>
+
+    
+
+    <h3>Work Experience</h3>
+    <div class="form-group mt-2" id="we">
+    <label for="">Work Experience</label>
+    <textarea type="text" class="form-control weField"  placeholder="Enter here"></textarea>
+    <div class="container text-center" id="weAddButton">
+    <button onclick="addNewWEField()" class="btn btn-sm btn-primary mt-2">Add work experience </button>
+    </div>
+    </div>
+<div class="container">
+<button onclick="generatecv()" class="btn btn-primary butn">Generate Resume</button>
+</div>
+</div>
+
+<!--template-->
+<div class="container"  id="cv-template"> 
+<div class="row">
+<div class="col-4 back">
+<p class="name" ><b id="name1">firstname </b><br>
+ <b id="name2"> lastname</b></p>
+<p class="contact"><b> Contact </b></p>
+<p id="phone2"> Phone : </p>
+<p id="mail">email: </p>
+<p id="address2">Address : </p>
+<div class="links">
+<p id="linkedin2">linkedin </p>
+<p id="gfg2">gfg </p>
+<p id="codechef2">codechef </p>
+</div>
+</div>
+<div class="col-8 cont2">
+ <p class="title"><b>Objective</b></p>
+<p id="objective2">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nihil qui officia placeat hic ratione rerum provident architecto distinctio modi amet, aliquam reprehenderit quibusdam consequuntur et itaque obcaecati unde voluptatibus aperiam!</p>
+<p class="title"> <b>Academic Qualification</b></p>
+<ul id="ed2">
+<li>Education1</li>
+<li>Education2</li>
+<li>Education3</li>
+</ul >
+<p class="title"> <b>Project Work </b></p>
+<ul id="pw2">
+<li>Project Work1</li>
+<li>Project Work2</li>
+<li>Project Work3</li>
+</ul>
+<p class="title"> <b>Work Experience </b></p>
+<ul id="we2">
+<li>Work Experience1</li>
+<li>Work Experience2</li>
+<li>Work Experience3</li>
+</ul>
+</div>
+</div>
+<div class="container">
+<button onclick="printcv()" class="btn btn-primary butn" id="buttonn">Download</button>
+</div>
+</div>
+
+ <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/js/bootstrap.min.js"
+        integrity="sha384-oesi62hOLfzrys4LxRF63OJCXdXDipiYWBnvTl9Y9/TRlw5xlKIEHpNyvvDShgf/"
+        crossorigin="anonymous"></script>
+<script src="add.js"></script>
+</body>
+</html>
